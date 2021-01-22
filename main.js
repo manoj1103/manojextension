@@ -6,22 +6,15 @@ define([
         // Adds a cell above current cell (will be top if no cells)
         var add_cell = function() {
         Jupyter.notebook.
-        insert_cell_above('code').
+        insert_cell_above('markdown').
         // Define default cell here
         set_text(`# Standard data science libraries
-import pandas as pd
-import numpy as np
-from scipy import stats
-import featuretools as ft
-# Visualization
-import matplotlib.pyplot as plt
-import seaborn as sns
-plt.style.use('bmh')
-# Options for pandas
-pd.options.display.max_columns = 20
-# Display all cell outputs
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = 'all'
+# Title of the Notebook
+### Author :- 
+#############################
+#### import pandas as pd
+#### import numpy as np
+#############################
 `);
 Jupyter.notebook.select_prev();
 Jupyter.notebook.execute_cell_and_select_below();
